@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cositas</title>
+		<style>
+			body { margin: 0; 
+            overflow-x:hidden;}
+            
+#canvas {
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    position: static; /* fixed or static */
+}
+		</style>
+	</head>
+	<body>
+        <div id="canvas">
+
+
+        </div>
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+              }
+            }
+          </script>
+		<script type="module">
+import * as THREE from "three";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// Scene
+const scene = new THREE.Scene();
+
+const loader = new GLTFLoader();
+loader.load(
+	// resource URL
+	'/adamHead.gltf',
+	// called when the resource is loaded
+	function ( gltf ) {
+        var object = gltf.scene;				
+	gltf.scene.scale.set( 1, 1, 1 );			   
+	gltf.scene.position.x = 0;				    //Position (x = right+ left-) 
+        gltf.scene.position.y = 0;				    //Position (y = up+, down-)
+	gltf.scene.position.z = 0;
+
+		scene.add( gltf.scene );
+
+	},
+	// called while loading is progressing
+	function ( xhr ) {
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+	}
+);
+
+// Set up lights
+const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
+directionalLight.position.set(0.5, 1, 0); // x, y, z
+scene.add(directionalLight);
+
+// Camera
+const width = 10;
+const height = width * (window.innerHeight / window.innerWidth);
+const camera = new THREE.OrthographicCamera(
+  width / -2, // left
+  width / 2, // right
+  height / 2, // top
+  height / -2, // bottom
+  1, // near
+  100 // far
+);
+
+
+
+
+
+
+camera.position.set(10, 10, 10);
+camera.lookAt(0, 0, 0);
+// Renderer
+scene.background = new THREE.Color('gray');
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.render(scene, camera);
+
+
+
+var container = document.getElementById('canvas');
+var w = container.offsetWidth;
+var h = container.offsetHeight;
+renderer.setSize(w, h);
+container.appendChild(renderer.domElement);
+renderer.render(scene, camera);
+
+window.addEventListener('resize', onWindowResize, false)
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight
+    camera.updateProjectionMatrix()
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.render(scene,camera)
+}
+
+window.addEventListener("wheel", function(e) {
+camera.translateX(0.1 * e.deltaX)
+camera.lookAt(0, 0, 0);
+
+  renderer.render(scene, camera);
+  // code to increment object.position.z 
+}, true);
+
+		</script>
+	</body>
+</html>
