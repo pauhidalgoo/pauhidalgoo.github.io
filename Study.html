@@ -1,0 +1,264 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title> TuDy 🌊</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+      #rell{
+        font-weight: bold;
+        font-size: 13vw;
+
+      }
+      .prova{
+        height: 90%;
+        width: 95%;
+        background-color: white;
+        border-radius: 15px;
+        border-color: rgb(104, 104, 104);
+        margin-top: 1em;
+
+      }
+      .textet{
+        font-size: 10px;
+      }
+      .btn-clar{
+
+        background-color: rgb(235, 235, 235)
+      }
+      .tempss{
+        width: 90%;
+      }
+      .btn-t{
+        width: 90%;
+      }
+
+    </style>
+  </head>
+  <body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark d-flex align-self-center justify-content-center text-center">
+      <a class="nav-link" style="color: rgb(235, 235, 235)" href="index.html">Home <span class="sr-only">(current)</span></a>
+        
+      <a class="nav-link" style="color: rgb(235, 235, 235)" href="TuDy.html">TuDy <span class="sr-only">(current)</span></a>
+        <a class="nav-link" style="color: rgb(235, 235, 235)" href="Study.html">Studyset</a>
+        <a class="nav-link" style="color: rgb(235, 235, 235)" href="Calendari.html">Calendari</a>
+        <a class="nav-link" style="color: rgb(235, 235, 235)" href="Chill.html">Chillin'room</a>
+        <a class="nav-link" style="color: rgb(235, 235, 235)" href="quequieresquetediga.html">'bout me</a>
+
+    </nav>
+
+    <div class="row">
+        <div class="col-3 align-items-center text-center justify-content-center align-self-center">
+          <div class="prova p-3 textet shadow-sm">
+            Hola.
+            <p>Simplement una coseta, si recarregues aquesta pàgina el contador es para :)</p>
+            <p>Si treus aquesta pestanya també passa el mateix (encara que estiguis en una altra pestanya de la web). Si vols canviar, per exemple, a chilling, obre-ho en una altra pestanya :)</p>
+          </div> 
+        </div>
+        <div class="col-6 align-items-center text-center" >
+        <div class="row align-self-center text-center">
+          <div class="col align-self-center text-center" id = "rell">
+            00 : 00
+          </div>
+        </div>
+        <div class="row align-self-center text-center mt-3">
+          <div class="col align-self-center text-center">
+            <button type="button" class="btn btn-clar" id = "menys">-</button>
+          </div>
+          <div class="col align-self-center text-center">
+            <button type="button" class="btn btn-clar" id="startstop">Comença/Para</button>
+          </div>
+          <div class="col align-self-center text-center">
+            <button type="button" class="btn btn-clar" id = "mes">+</button>
+          </div>
+        </div>
+        <div class="row align-items-center text-center align-self-center justify-content-center mt-3">
+          <div class="col-3 align-items-center align-self-center">
+            <input type="number" max="99" class="form-control" value="30" id="minuu" >
+          </div>
+          <div class="col-2 align-items-center align-self-center">
+            <button class="btn btn-claret btn-t" id="minutets"> Ok </button>
+          </div>
+          
+        </div>
+      </div>
+
+        <div class="col align-items-center text-center">
+
+          <div class="prova shadow-sm">
+            <div class="m-4">
+                <div class="mt-3 mb-3">
+                  <label class="form-label mt-4" style="text-align:start; font-weight: bold">Tasques per avui :)</label>
+                  <input type="text" class="form-control" id="tasca" aria-describedby="Afegeix la teva tasca">
+                  <button class="btn btn-light mt-3" id="btasca" > Voy </button>
+                  <button class="btn btn-light mt-3" id="ntasca" > Neteja </button>
+                </div>
+                <div class="mt-3 mb-3 pb-4" id="llistadetasques">
+                  
+
+                </div>
+              
+            </div>
+          </div>
+          
+        </div>
+    </div>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+      
+
+      
+      Notification.requestPermission();
+
+
+
+      var rellotge = document.getElementById("rell");
+      function refreshStudy(){
+        var data = new Date().toLocaleString();
+        var formatdata = data.replace(", ", " - ");
+        rellotge.innerHTML = formatdata;
+
+      }
+
+      var durada = 10;
+      function alerta(){
+
+        let text = "Ja està!"
+        var options = {
+            body: "Has acabat el teu temps d'estudi, guap@. Et mereixes un descans!",
+            icon: "./Imatges/water-wave_1f30a.png"
+            
+
+        }
+        var notification = new Notification(text, options);
+        console.log("aa")
+        var audio = new Audio("./Imatges/Alarma.mp3");
+        audio.play();
+
+      }
+
+      var mes = document.getElementById("mes")
+      mes.addEventListener('click', function(){
+        durada = durada + 30;
+        rellotge.innerHTML = (~~(durada/60)).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + " : " + (durada%60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+      })
+
+      var menys = document.getElementById("menys")
+      menys.addEventListener('click', function(){
+        if (durada >=30){
+        durada = durada - 30;}
+        rellotge.innerHTML = (~~(durada/60)).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + " : " + (durada%60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+      })
+
+      var minutet = document.getElementById("minutets")
+      minutet.addEventListener('click', function(){
+        var teminutet = document.getElementById("minuu")
+        var dur = teminutet.value;
+        if (dur<100){
+          durada = parseInt(dur)*60;
+          
+          rellotge.innerHTML = (~~(durada/60)).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + " : " + (durada%60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+        }
+        else{
+          window.alert("El número de minuts és massa gran!")
+          teminutet.value = 99;
+        }
+
+      })
+
+
+      rellotge.innerHTML = (~~(durada/60)).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + " : " + (durada%60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+
+      var start = document.getElementById("startstop");
+
+
+      
+      var inici = false;
+      start.addEventListener('click', function(){
+        if (!inici){
+          window.intervalID = setInterval(refreshTimer, 1000);
+          if (durada == 0){
+            clearInterval(intervalID);
+          }
+          inici = true;
+        }
+        else{
+          clearInterval(intervalID);
+          inici = false;
+        }
+
+        }
+        
+      );
+      function refreshTimer(){
+        if (durada >= 0){
+        rellotge.innerHTML = (~~(durada/60)).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + " : " + (durada%60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+        durada = durada - 1;}
+
+        else{
+          alerta();
+          clearInterval(intervalID);
+        }
+      }
+      
+      var btasca = document.getElementById("btasca")
+      btasca.addEventListener('click', function(){
+        var tasca = document.getElementById("tasca");
+        var quetocafer = tasca.value;
+        if (quetocafer!=0){
+        var llistatasques = document.getElementById("llistadetasques");
+        llistatasques.innerHTML += '<p><input type="checkbox" class="form-check-input">' + quetocafer + ' </input></p>';
+        var guardatasques = sessionStorage.getItem("tasques");
+        guardatasques += ',' + quetocafer;
+        sessionStorage.setItem("tasques", guardatasques);
+        }
+
+        tasca.value = "";
+      })
+      
+      var ntasca = document.getElementById("ntasca")
+      ntasca.addEventListener('click', function(){
+
+        var llistatasques = document.getElementById("llistadetasques");
+        llistatasques.innerHTML = "";
+        sessionStorage.setItem("tasques", "");
+      })
+
+      window.onload = function(){
+        var tasquesguardades = sessionStorage.getItem("tasques")
+        if (tasquesguardades!=null){
+          var hola = tasquesguardades.split(',');
+          if (hola != null && hola!=""){
+          hola.forEach(element => {
+            if (element!='' && element!=null){
+              var llistatasques = document.getElementById("llistadetasques");
+              llistatasques.innerHTML += '<p><input type="checkbox" class="form-check-input">' + element + ' </input></p>';
+            }
+          });
+          }
+        }
+      }
+
+
+    </script>
+
+
+  </body>
+</html>
+

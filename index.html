@@ -1,86 +1,180 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport">
-    <title>Pau Hidalgo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>PH</title>
+</head>
 <style>
 body{
-  background: rgb(255,156,238);
-background: linear-gradient(180deg, rgba(255,156,238,1) 0%, rgba(155,241,255,1) 100%);
-background-attachment: fixed;
+  overflow-x:hidden;
+  background-color: #020016;
+  color:aliceblue;
 }
-@font-face {
-  font-family: freshMarker;
-  src: url(/freshmarker.ttf);
+div{
+  display:block;
 }
-.header{
-  font-family:  freshMarker;
-  padding:5vh;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  
+.hero{
+  position:absolute;
+  overflow:hidden;
 }
 .content{
-  background: rgba(255,255,255, 0.7);
-  margin: 10px;
-  padding:4vw;
-  border-radius: 30px;
+  position:absolute;
+}
+.hero-wrapper{
+  position:relative;
+  width: 100%;
+  height: auto;
+  
+  
+}
+.section-hero{
+  position:relative;
+  width: 100%;
+  height: 115vh;
+  
+}
+.section-content{
+  position:relative;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(180deg, #11112b, #020016);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding:40px;
+}
+.left1{
+  text-align: left;
+  padding-left: 5vw;
 
 }
-.content p{
-  font-size: 20px; 
-  font-family: Courier;
+.back09{
+  padding-top:10vh;
+  margin-left: 60%;
 }
-.navbar{
-  width: 100%;
-  height: 9%;
+.back10{
+  padding-top:30vh;
+  margin-left:10%;
+  width:28vw;
+}
+img{
+  max-width:100vw;
+
+
+}
+a{
+  color:aliceblue;
 }
 </style>
-</head>
 <body>
-  <div class="navbar">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/render.html">Render</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Aboutme">About me</a>
-              </li>
-
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-  </div>
   
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MyWeb</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="TuDy.html">🌊 TuDy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">More to come in the future</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<div class="header">
-<h1 style="font-family:freshMarker; font-size:5vw" class="align-middle">WHo aM I?</h1>
-<h2>by Pau HidAlgo Pujol</h2>
-</div>
-<div class="content" id="Aboutme">
-<p > Hi! I'm a freshman AI student at UPC, in Barcelona. I was born in Banyoles, near Girona, the 26th november of 2004. </p>
-<p >I started programming at 14 years as an extracurricular activity. I tried a lot of different languages (C, C++, C#, Java, JS), but I would say my favourite one, and the one I'm most used to, is Python. </p>
-<p> </p>
-</div>
-<div class="footer">
 
+<div class="main-wrapper">
+
+  <div class="section-hero">
+      <div class="hero-wrapper">
+        
+        <img src="/Media/back-deg.png" class="hero back01" id="back01">
+        <img src="/Media/back8.png" loading="lazy" alt="" class="hero back02" style="will-change: transform; transform: translate3d(0px, 0.7395%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="back02">
+        <img src="/Media/back7.png" loading="lazy"  alt="" class="hero back03" style="will-change: transform; transform: translate3d(0px, 0.66555%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="back03">
+        <img src="/Media/back6.png" loading="lazy" alt="" class="hero back04" style="will-change: transform; transform: translate3d(0px, 0.5916%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="back04">
+        <img src="/Media/back5.png" loading="lazy" alt="" class="hero back06" style="will-change: transform; transform: translate3d(0px, 0.4437%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="back05">
+        <img src="/Media/back3.png" loading="lazy" alt="" class="hero back06" style="will-change: transform; transform: translate3d(0px, 0.4437%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="back06">
+        <img src="/Media/back2.png" loading="lazy" alt="" class="hero back06" style="will-change: transform; transform: translate3d(0px, 0.4437%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="back07">
+        <img src="/Media/back1.png" loading="lazy" alt="" class="hero back06" style="will-change: transform; transform: translate3d(0px, 0.4437%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="back08">
+
+      </div>
+    </div>
+  <div class="section-content">
+    <p > Hi! I'm Pau Hidalgo, a freshman AI student at UPC in Barcelona. I was born in Banyoles, near Girona, the 26th november of 2004. </p>
+    <p >I started programming at 14 years as an extracurricular activity. I tried a lot of different languages (C, C++, C#, Java, JS), but I would say my favourite one, and the one I'm most used to, is Python. </p>
+  <p> I have created this web first of all, to have a place to try new things. It's still pretty recent, so there isn't a lot of things here right now, but the idea is that this web will
+    start getting bigger once I start creating more things as a programmer. For me, it's like a personal project, where I can learn things that otherwise probabily I would never have heard about.
+</p>
+<p> I'm pretty new to creating webpages, so any kind of feedback is good for me. You can contact me at pauhidalgopujol@gmail.com</p>
 </div>
+  <div class="section-end">
+   
+  </div>
+          
+</div>
+<script>
+
+var back1 = document.querySelector("#back01");
+var back2 = document.querySelector("#back02");
+var back3 = document.querySelector("#back03");
+var back4 = document.querySelector("#back04");
+var back5 = document.querySelector("#back05");
+var back6 = document.querySelector("#back06");
+var back7 = document.querySelector("#back07");
+var back8 = document.querySelector("#back08");
+var container = back5.parentElement;
+function setTranslate(xPos, yPos, el){
+    el.style.transform = "translate3d(" + xPos + "px , " + yPos + "px, 0)";
+}
+
+
+window.addEventListener("DOMContentLoaded", scrollLoop, false);
+
+var xScrollPosition;
+var yScrollPosition;
+var cloud1 = 0;
+var cloud2 = 0;
+var sign1 = 1;
+var sign2 = -1;
+function scrollLoop() {
+    xScrollPosition = window.scrollX;
+    yScrollPosition = window.scrollY;
+    setTranslate(0, yScrollPosition * 0.15, back2);
+    setTranslate(0, yScrollPosition * 0.1, back3);
+    setTranslate(0, yScrollPosition * 0.3, back6);
+    setTranslate(0, yScrollPosition * 0.1, back7);
+    setTranslate(0, yScrollPosition * 0.05, back8);
+    setTranslate(cloud1, yScrollPosition * 0.4, back5);
+    setTranslate(cloud2, yScrollPosition * 0.3, back4);
+    cloud1 += 0.5*sign1;
+    cloud2 += 0.3*sign2;
+    if (cloud1 + 900> window.innerWidth || cloud1 + 250< 0){
+        sign1 *=-1;
+    }
+    if (cloud2 + 1100> window.innerWidth || cloud2 + 550< 0){
+        sign2 *=-1;
+    }
+    requestAnimationFrame(scrollLoop);
+}
+
+
+
+
+
+</script>
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
 </body>
 </html>
+
