@@ -283,22 +283,7 @@ body, html {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .column {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .floating-navbar {
-        right: 10px;
-        top: 10px;
-    }
-}
 
 #brain-container {
     width: 800px; 
@@ -332,4 +317,30 @@ body, html {
 .floating-social a img {
     width: 30px; /* Adjust size as needed */
     height: auto;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .fields-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .column {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .floating-navbar {
+        right: 10px;
+        top: 10px;
+        opacity:0;
+    }
+    .floating-brain img{
+        width: 20vw;
+    }
 }
