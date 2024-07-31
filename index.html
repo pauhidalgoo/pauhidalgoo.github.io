@@ -6,6 +6,9 @@
     <title>Pau H Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="../Media/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -34,7 +37,7 @@
                 </div>
                 <div class="field" id="aguacate">
                     <img src="../Media/aguacate.png" alt="Aguacate Icon">
-                    <a href="aguacate.html">Aguacate 🥑</a>
+                    <a href="https://github.com/pauhidalgoo/aguacate">Aguacate 🥑</a>
                     <p>Creating outfits based on Mango's clothes (Datathon 2023 challenge)</p>
                 </div>
                 <div class="subtext">
@@ -44,7 +47,7 @@
             <div class="column">
                 <div class="field" id="spotify">
                     <img src="../Media/spotify.png" alt="Spotify Icon">
-                    <a href="spotify.html">Spotify Top Songs</a>
+                    <a href="https://github.com/pauhidalgoo/top-streaming-songs-modeling">Spotify Top Songs</a>
                     <p>Statistical analysis of the most streamed songs + geospatial data, playlist creation, gender prediction...</p>
                 </div>
                 <div class="subtext">
@@ -52,7 +55,7 @@
                 </div>
                 <div class="field" id="travel">
                     <img src="../Media/travel.jpeg" alt="Travel Icon">
-                    <a href="placeholder.html">Travel assistant</a>
+                    <a href="https://github.com/nuriallfe/hackupc-2024">Travel assistant</a>
                     <p>Recommending cities and monuments to visit based on descriptions or images</p>
                 </div>
                 <div class="subtext">
@@ -62,7 +65,7 @@
             <div class="column">
                 <div class="field" id="auditoria">
                     <img src="../Media/auditoria.png" alt="Invetory Icon">
-                    <a href="placeholder.html">Inventory impairment</a>
+                    <a href="https://github.com/caiselvass/challenge-auditoria">Inventory impairment</a>
                     <p>3 indexs to predict inventory impairment, using autoencoders, time series predictions,... (Challenge Col·legi d'Auditors)</p>
                 </div>
                 <div class="subtext">
@@ -70,7 +73,7 @@
                 </div>
                 <div class="field" id="word">
                     <img src="../Media/word.png" alt="Word embeddings Icon">
-                    <a href="placeholder.html">Word embeddings</a>
+                    <a href="https://github.com/pauhidalgoo/word-embeddings">Word embeddings</a>
                     <p> Training custom word embeddings (Word2Vec) + using embeddings for Semantic Text Similarity + finetunning RoBERTa</p>
                 </div>
                 <div class="subtext">
@@ -79,9 +82,13 @@
             </div>
         </div>
         <div class="floating-text">
-            <p>Still in progress ...</p>
+            <p>And more to come!</p>
         </div>
-        <div class="about-section">
+        <div class="brain-section" style="text-align: center;">
+            <div id="brain-container" style="width: 100%; height: 100%;"></div>
+            <p>"Neural Networks of the Brain" (https://skfb.ly/oq8Bs) by Universal Design for Learning is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p>
+        </div>
+        <div class="about-section" id="about">
             <div class="column">
                 <div class="info-box">
                     <h3>Life and Interests</h3>
@@ -112,6 +119,15 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
+    <div class="floating-brain">
+        <img src="../Media/brain.png" alt="Brain image">
+    </div>
+    <div class="floating-social">
+        <a href="https://www.linkedin.com/in/pau-hidalgo-pujol-184388269/" target="_blank"><img src="../Media/linkedin.png" alt="LinkedIn Icon"></a>
+        <a href="https://github.com/pauhidalgoo" target="_blank"><img src="../Media/github.png" alt="GitHub Icon"></a>
+        <a href="https://huggingface.co/pauhidalgoo" target="_blank"><img src="../Media/huggingface.png" alt="Twitter Icon"></a>
+    </div>
     <script src="script.js"></script>
+    <script src="brain.js"></script>
 </body>
 </html>
