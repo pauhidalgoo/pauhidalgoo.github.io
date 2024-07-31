@@ -299,3 +299,37 @@ body, html {
         top: 10px;
     }
 }
+
+#brain-container {
+    width: 800px; 
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.floating-brain{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.floating-brain img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.floating-social {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.floating-social a img {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+}
