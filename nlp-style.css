@@ -41,6 +41,7 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     margin-bottom: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #ddd;
     color:#ddd;
     display: flex;
@@ -55,7 +56,7 @@
 
 
 .message {
-    max-width: 60%;
+    max-width: 70%;
     padding: 15px;
     border-radius: 15px;
     word-wrap: break-word;
@@ -200,4 +201,18 @@ button:hover {
     color:#4b4b4b;
     font-size: 16px;
     font-family: 'Trebuchet MS';
+}
+
+
+@media (max-width: 768px) {
+    .message {
+        max-width: 80%;
+    }
+    .chat-box{
+        margin-top: 60px;
+    }
+    .subtext{
+        font-size: 14px;
+        margin-top: -80px;
+    }
 }
