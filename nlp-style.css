@@ -195,3 +195,9 @@ button:hover {
 .title span.hovered {
     color: red;
 }
+
+.subtext{
+    color:#4b4b4b;
+    font-size: 16px;
+    font-family: 'Trebuchet MS';
+}
