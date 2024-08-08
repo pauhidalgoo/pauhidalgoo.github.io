@@ -32,3 +32,27 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial call to handle the initial scroll position
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const brainImage = document.querySelector('.floating-brain img');
+    const brainMenu = document.getElementById('brainMenu');
+    const brain3d = document.getElementById('brain-container');
+    const closeMenu = document.querySelector('.close-menu');
+
+    const openMenu = () => {
+        brainMenu.classList.add('show');
+    };
+
+    const closeMenuFunction = () => {
+        brainMenu.classList.remove('show');
+    };
+
+    brainImage.addEventListener('click', openMenu);
+    brain3d.addEventListener('click', openMenu);
+
+    closeMenu.addEventListener('click', closeMenuFunction);
+    brainMenu.addEventListener('click', (event) => {
+        if (event.target === brainMenu) {
+            closeMenuFunction();
+        }
+    });
+});
