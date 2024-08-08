@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Language Processing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nlp-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="intro-section" id="title">
+            <div class="title" id="titletext">
+                <h1 id="title-text">
+                    <span>N</span><span>a</span><span>t</span><span>u</span><span>r</span><span>a</span><span>l</span>
+                    <span> </span>
+                    <span>L</span><span>a</span><span>n</span><span>g</span><span>u</span><span>a</span><span>g</span><span>e</span>
+                    <span> </span>
+                    <span>P</span><span>r</span><span>o</span><span>c</span><span>e</span><span>s</span><span>s</span><span>i</span><span>n</span><span>g</span>
+                </h1>
+                <p>Exploring the Power of Language</p>
+            </div>
+        </div>
+    
+
+    <div class="content-section" id="chat-container" style="display: none;">
+        <div class="chat-box">
+            <div id="chat-messages" class="chat-messages"></div>
+            <input type="text" id="user-input" placeholder="Ask me about NLP...">
+            <button id="send-button">Send</button>
+        </div>
+        <p class="subtext" style="text-align: center; width:60vw;">Some of the responses were generated using ChatGPT, so they may include incorrect information</p>
+        
+    </div>
+    <div id="loading-container" class="loading-container">
+        <div class="loading-bar"></div>
+        <p>Loading model...</p>
+    </div>
+    </div>
+    <div class="floating-social">
+        <a href="https://www.linkedin.com/in/pau-hidalgo-pujol-184388269/" target="_blank"><img src="../Media/linkedin.png" alt="LinkedIn Icon"></a>
+        <a href="https://github.com/pauhidalgoo" target="_blank"><img src="../Media/github.png" alt="GitHub Icon"></a>
+        <a href="https://huggingface.co/pauhidalgoo" target="_blank"><img src="../Media/huggingface.png" alt="Twitter Icon"></a>
+    </div>
+    <div class="alt-floating-brain">
+        <img src="../Media/brain.png" alt="Brain image">
+    </div>
+    <div class="back-home">
+        <h2><a href="index.html">BACK</a></h2>
+    </div>
+
+    <div class="brain-menu" id="brainMenu">
+        <div class="menu-content">
+            <h2>Select an AI Field</h2>
+            <div class="menu-section">
+                <a href="./nlp.html">Natural Language Processing</a>
+                <a href="./computer_vision.html">Computer Vision</a>
+                <a href="./statistics.html">Statistical Analysis</a>
+                <a href="./recommendation.html">Recommendation Systems</a>
+                <a href="./generative.html">Generative AI</a>
+            </div>
+            <div class="close-menu">✖</div>
+        </div>
+    </div>
+    
+    <script src="chat.js"></script>
+</body>
+</html>
