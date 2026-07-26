@@ -51,6 +51,9 @@ menu:
     - name: "About"
       pageRef: "/about"
       weight: 50
+    - name: "Search"
+      pageRef: "/search"
+      weight: 60
 
 params:
   env: "production"

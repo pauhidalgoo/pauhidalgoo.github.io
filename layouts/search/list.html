@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main class="index-shell search-shell">
+  <header class="simple-header">
+    <p class="overline">Site index</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </header>
+  <form class="search-form" role="search">
+    <label for="site-search">Search by title, topic, or keyword</label>
+    <div>
+      <input id="site-search" type="search" autocomplete="off" placeholder="Try “graphs”, “Catalan”, or “probability”">
+      <span aria-hidden="true">⌕</span>
+    </div>
+  </form>
+  <p id="search-status" class="search-status" aria-live="polite">Start typing to search the archive.</p>
+  <div id="search-results" class="search-results"></div>
+</main>
+<script src="/js/search.js" defer></script>
+{{ end }}
