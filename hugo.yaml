@@ -1,3 +1,12 @@
 baseURL: https://example.org/
-locale: en-us
-title: My New Hugo Project
+locale: "en"
+title: "Pau Hidalgo"
+theme: "PaperMod"
+params:
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
