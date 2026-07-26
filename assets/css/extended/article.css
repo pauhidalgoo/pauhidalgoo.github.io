@@ -1,0 +1,50 @@
+
+.archive-controls {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.complete-archive {
+  margin-top: 5rem;
+}
+
+.complete-archive > section {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 100px 1fr;
+  margin-bottom: 4rem;
+}
+
+.complete-archive > section > h2 {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.complete-archive article {
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 70px 80px 1fr 190px;
+  padding: 0.9rem 0;
+}
+
+.complete-archive article > time,
+.complete-archive article > span {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+}
+
+.complete-archive h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.complete-archive h3 a {
+  text-decoration: none;
+}

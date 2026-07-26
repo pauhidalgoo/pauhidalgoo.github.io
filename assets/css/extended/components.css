@@ -1,0 +1,37 @@
+.plain-link,
+.card-link,
+.block-header > a,
+.home-about > a,
+.archive-controls a {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.article-resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.article-resource-links a {
+  border: 1px solid var(--line-dark);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 0.45rem 0.65rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.article-resource-links a:hover {
+  background: var(--ink);
+  color: white;
+}
+
+.article-resource-links--inline {
+  justify-content: flex-start;
+  margin: 1.5rem 0;
+}
