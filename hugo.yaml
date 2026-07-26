@@ -1,8 +1,30 @@
-baseURL: https://example.org/
-locale: "en"
-title: "Pau Hidalgo"
+baseURL: "https://pauhidalgoo.github.io/"
+title: "Pau Hidalgo Pujol"
 theme: "PaperMod"
+locale: "en"
+defaultContentLanguage: "en"
+enableRobotsTXT: true
+enableGitInfo: true
+pagination:
+  pagerSize: 10
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 params:
+  env: "production"
+  description: "Personal research website and technical writing archive for Pau Hidalgo Pujol."
+  author: "Pau Hidalgo Pujol"
+  tagline: "Machine learning research, from Barcelona."
+  defaultTheme: "light"
+  disableThemeToggle: true
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
@@ -10,3 +32,22 @@ params:
   ShowCodeCopyButtons: true
   ShowToc: true
   TocOpen: false
+  assets:
+    disableHLJS: true
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/pauhidalgoo"
+    - name: "huggingface"
+      url: "https://huggingface.co/pauhidalgoo"
+    - name: "email"
+      url: "mailto:pauhidalgopujol@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/pau-hidalgo-pujol-184388269/"
+
+privacy:
+  x:
+    disabled: true
+  instagram:
+    disabled: true
+  youtube:
+    privacyEnhanced: true
