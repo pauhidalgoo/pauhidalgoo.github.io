@@ -8,15 +8,38 @@ enableGitInfo: true
 pagination:
   pagerSize: 10
 
+permalinks:
+  writing: "/writing/:slug/"
+
 taxonomies:
   tag: "tags"
   category: "categories"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false
 
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+
+menu:
+  main:
+    - name: "Writing"
+      pageRef: "/writing"
+      weight: 10
+    - name: "About"
+      pageRef: "/about"
+      weight: 20
 
 params:
   env: "production"
@@ -32,6 +55,8 @@ params:
   ShowCodeCopyButtons: true
   ShowToc: true
   TocOpen: false
+  mainSections:
+    - "writing"
   assets:
     disableHLJS: true
   socialIcons:

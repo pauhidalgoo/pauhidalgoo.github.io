@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PH monogram">
+  <rect width="64" height="64" rx="12" fill="#20231f"/>
+  <path d="M12 46V18h11.5c7.3 0 12 3.8 12 10.1s-4.7 10.2-12 10.2H18V46h-6zm6-13h5.1c4.1 0 6.3-1.6 6.3-4.9s-2.2-4.8-6.3-4.8H18V33z" fill="#f7f6f2"/>
+  <path d="M37 18h6v11h9V18h6v28h-6V34.5h-9V46h-6V18z" fill="#f7f6f2"/>
+  <circle cx="56" cy="52" r="3.5" fill="#91aceb"/>
+</svg>
