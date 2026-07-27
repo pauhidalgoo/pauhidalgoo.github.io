@@ -25,7 +25,7 @@ I studied cello at the Conservatori de Música de Girona and received a professi
 
 ## Curriculum vitae
 
-You can [download the full CV as a PDF](/files/cv.pdf).
+You can view my CV [here](/cv/) or [download the full CV as a PDF](/files/cv.pdf).
 
 ## Contact
 

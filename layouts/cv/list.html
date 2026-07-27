@@ -1,0 +1,63 @@
+{{ define "main" }}
+<main class="cv-shell">
+  <header class="cv-header">
+    <div>
+      <p class="section-index">{{ .Params.eyebrow }}</p>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Description }}</p>
+    </div>
+    <a class="download-button" href="/files/cv.pdf" download>Download PDF <span>↓</span></a>
+  </header>
+
+  <div class="cv-grid">
+    <aside class="cv-summary">
+      <p class="section-index">At a glance</p>
+      <dl>
+        <div><dt>Last</dt><dd>AI Research Intern<br>Nostrum Biodiscovery</dd></div>
+        <div><dt>Education</dt><dd>BSc Artificial Intelligence<br>UPC · 2022–2026</dd></div>
+        <div><dt>Exchange</dt><dd>Computer Science<br>ETH Zürich · 2025–2026</dd></div>
+        <div><dt>Languages</dt><dd>Catalan, Spanish, English (C2)</dd></div>
+      </dl>
+    </aside>
+
+    <div class="cv-record">
+      <section>
+        <p class="section-index">Research experience</p>
+        <div class="cv-item">
+          <div><h2>AI Research Intern</h2><p>Nostrum Biodiscovery · Barcelona</p></div><time>2026—2026</time>
+          <p>Geometric deep learning for protein structures: graph construction, efficient GearNet variants, and rewiring methods for over-squashing.</p>
+        </div>
+        <div class="cv-item">
+          <div><h2>Bachelor’s Thesis</h2><p>Telefónica I+D × UPC</p></div><time>2026</time>
+          <p>Human eye-tracking signals for language-model training, evaluation, and mechanistic interpretation. Grade: 10/10; awarded honours.</p>
+        </div>
+      </section>
+      <section>
+        <p class="section-index">Education</p>
+        <div class="cv-item">
+          <div><h2>Exchange Student, Computer Science</h2><p>ETH Zürich</p></div><time>2025—26</time>
+          <p>Master-level study in Probabilistic AI, Neural Network Theory, Reliable and Trustworthy AI, and learning in biological and artificial systems. Average: 5.0/6.0.</p>
+        </div>
+        <div class="cv-item">
+          <div><h2>BSc, Artificial Intelligence</h2><p>Universitat Politècnica de Catalunya</p></div><time>2022—26</time>
+          <p>Average mark: 8.86/10. Honours in Introduction to Machine Learning and Parallelism & Distributed Systems.</p>
+        </div>
+      </section>
+      <section>
+        <p class="section-index">Selected distinctions</p>
+        <ul class="cv-awards">
+          <li><span>2026</span>First-author accepted blogpost, GRaM @ ICLR</li>
+          <li><span>2025</span>HackUPC winner, Grafana challenge</li>
+          <li><span>2023–24</span>Two-time DatathonFME winner</li>
+          <li><span>2024</span>AINAHack winner</li>
+          <li><span>2022</span>Premi Astrobanyoles, neural music composition</li>
+        </ul>
+      </section>
+      <section>
+        <p class="section-index">Tools & methods</p>
+        <p class="cv-skills">Python · PyTorch · Hugging Face · C/C++ · SQL · R · geometric deep learning · GNNs · LLMs · probabilistic ML · NLP · reinforcement learning · computer vision</p>
+      </section>
+    </div>
+  </div>
+</main>
+{{ end }}
