@@ -4,7 +4,7 @@ date: 2025-01-01
 description: "An LLM-powered assistant for navigating Catalan public administration."
 summary: "A web-search and video creation assistant designed to make public information more accessible to young people."
 type_label: "AINAHack winner"
-project_no: "P-02"
+project_no: "P-03"
 links:
   - label: "Repository"
     url: "https://github.com/pauhidalgoo/LaIA"
