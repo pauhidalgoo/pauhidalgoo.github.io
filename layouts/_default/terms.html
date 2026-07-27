@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main class="index-shell">
+  <header class="simple-header">
+    <p class="overline">Browse the archive</p>
+    <h1>Tags</h1>
+    <p>Topics used across writing, research notes, and projects.</p>
+  </header>
+  <div class="all-tags">
+    {{ range .Data.Terms.Alphabetical }}
+      <a href="{{ .Page.RelPermalink }}">
+        <span>{{ .Page.Title }}</span>
+        <small>{{ .Count }} item{{ if ne .Count 1 }}s{{ end }}</small>
+      </a>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

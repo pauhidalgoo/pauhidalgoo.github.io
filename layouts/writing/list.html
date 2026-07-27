@@ -1,0 +1,35 @@
+{{ define "main" }}
+<main class="index-shell writing-index">
+  <header class="simple-header simple-header--compact">
+    <p class="overline">Articles and notes</p>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <nav class="tag-filter" aria-label="Writing topics">
+    <span>Filter by topic</span>
+    {{ $writingPages := where site.RegularPages "Section" "writing" }}
+    {{ $writingTags := slice }}
+    {{ range $writingPages }}{{ range .Params.tags }}{{ $writingTags = $writingTags | append . }}{{ end }}{{ end }}
+    {{ range sort (uniq $writingTags) }}
+      {{ $tag := . }}
+      {{ $count := len (where $writingPages "Params.tags" "intersect" (slice $tag)) }}
+      <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}/">{{ $tag }} <small>{{ $count }}</small></a>
+    {{ end }}
+  </nav>
+  <div class="writing-list">
+    {{ range .Pages.ByDate.Reverse }}
+      <article>
+        <div class="writing-meta">
+          <span>{{ .Params.type_label }}</span>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+          <span>{{ .ReadingTime }} min</span>
+        </div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Summary | plainify }}</p>
+        <div class="tag-list">
+          {{ range .Params.tags }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

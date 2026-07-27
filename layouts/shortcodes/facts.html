@@ -1,0 +1,12 @@
+<dl class="project-facts">
+  {{- $lines := split (strings.TrimSpace .Inner) "\n" -}}
+  {{- range $lines -}}
+    {{- $parts := split . "|" -}}
+    {{- if ge (len $parts) 2 -}}
+      <div>
+        <dt>{{ index $parts 0 | strings.TrimSpace }}</dt>
+        <dd>{{ index $parts 1 | strings.TrimSpace }}</dd>
+      </div>
+    {{- end -}}
+  {{- end -}}
+</dl>

@@ -1,0 +1,7 @@
+<nav class="article-resource-links article-resource-links--inline" aria-label="Resources">
+  {{ with .Get "code" }}<a href="{{ . }}">Code ↗</a>{{ end }}
+  {{ with .Get "model" }}<a href="{{ . }}">Model ↗</a>{{ end }}
+  {{ with .Get "dataset" }}<a href="{{ . }}">Dataset ↗</a>{{ end }}
+  {{ with .Get "paper" }}<a href="{{ . }}">Paper ↗</a>{{ end }}
+  {{ with .Get "notebook" }}<a href="{{ . }}">Notebook ↗</a>{{ end }}
+</nav>

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<main class="index-shell">
+  <header class="simple-header simple-header--compact">
+    <p class="overline">Tagged</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ len .Pages }} item{{ if ne (len .Pages) 1 }}s{{ end }}</p>
+  </header>
+  <div class="entry-list">
+    {{ range .Pages.ByDate.Reverse }}
+      <article class="entry-row">
+        <div class="entry-meta"><span>{{ .Section }}</span><time>{{ .Date.Format "2006" }}</time></div>
+        <div><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2><p>{{ .Summary | plainify }}</p></div>
+        <a class="entry-arrow" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">→</a>
+      </article>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

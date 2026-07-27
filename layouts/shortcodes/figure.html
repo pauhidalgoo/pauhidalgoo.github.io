@@ -1,0 +1,11 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- if not $alt }}{{ errorf "The figure shortcode requires alt text in %s" .Position }}{{ end -}}
+<figure class="article-figure {{ if eq (.Get "full") "true" }}article-figure--full{{ end }}">
+  <img src="{{ $src }}" alt="{{ $alt }}">
+  <figcaption>
+    <span class="figure-counter"></span>
+    <span>{{ .Get "caption" }}</span>
+    {{ with .Get "source" }}<cite>Source: {{ . }}</cite>{{ end }}
+  </figcaption>
+</figure>

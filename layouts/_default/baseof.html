@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>{{ if .IsHome }}{{ site.Title }} — Machine Learning Research{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Description | default site.Params.description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <script>
+    (() => {
+      const saved = localStorage.getItem("colour-theme");
+      const theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  {{ $styles := slice }}
+  {{ range slice "css/extended/tokens.css" "css/extended/typography.css" "css/extended/layout.css" "css/extended/components.css" "css/extended/homepage.css" "css/extended/article.css" }}
+    {{ $styles = $styles | append (resources.Get .) }}
+  {{ end }}
+  {{ $css := $styles | resources.Concat "css/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ partial "extend_head.html" . }}
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  {{ partial "site-header.html" . }}
+  <div id="content">
+    {{ block "main" . }}{{ end }}
+  </div>
+  {{ partial "site-footer.html" . }}
+  <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+    <svg aria-hidden="true" viewBox="0 0 20 20">
+      <path d="M4 12.5L10 6l6 6.5M10 6v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <script src="/js/site.js" defer></script>
+</body>
+</html>
