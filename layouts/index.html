@@ -9,7 +9,8 @@
         deep learning for biology, language models, and interpretable systems.
       </p>
       <p class="intro-current">
-        BSc in Artificial Intelligence at UPC, with an exchange at ETH Zürich.
+        Currently an AI Research Intern at Nostrum Biodiscovery and completing
+        a BSc in Artificial Intelligence at UPC, after an exchange at ETH Zürich.
       </p>
       <div class="intro-links">
         <a href="/about/">About & CV</a>
@@ -23,5 +24,107 @@
     </figure>
   </section>
 
+  <section class="home-block home-block--writing" aria-labelledby="latest-writing">
+    <header class="block-header">
+      <div>
+        <p class="overline">Writing</p>
+        <h2 id="latest-writing">Latest writing</h2>
+      </div>
+      <a href="/writing/">All posts →</a>
+    </header>
+    <div class="writing-feature">
+      {{ range first 1 (where site.RegularPages "Section" "writing") }}
+        <article>
+          <div class="writing-meta">
+            <span>{{ .Params.type_label }}</span>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+            <span>{{ .ReadingTime }} min read</span>
+          </div>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Summary | plainify }}</p>
+          <div class="tag-list">
+            {{ range .Params.tags }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}
+          </div>
+        </article>
+      {{ end }}
+      <aside>
+        <p class="overline">Writing topics</p>
+        <div class="topic-list">
+          {{ $writingPages := where site.RegularPages "Section" "writing" }}
+          {{ $writingTags := slice }}
+          {{ range $writingPages }}{{ range .Params.tags }}{{ $writingTags = $writingTags | append . }}{{ end }}{{ end }}
+          {{ range sort (uniq $writingTags) }}
+            {{ $tag := . }}
+            {{ $count := len (where $writingPages "Params.tags" "intersect" (slice $tag)) }}
+            <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}/"><span>{{ $tag }}</span><small>{{ $count }}</small></a>
+          {{ end }}
+        </div>
+        <a class="plain-link" href="/tags/">Browse all tags →</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="home-block" aria-labelledby="home-research">
+    <header class="block-header">
+      <div>
+        <p class="overline">Research</p>
+        <h2 id="home-research">Current and recent work</h2>
+      </div>
+      <a href="/research/">Research index →</a>
+    </header>
+    <div class="research-grid">
+      <article class="research-card">
+        <div class="card-topline"><span>GRaM @ ICLR 2026</span><span>Accepted</span></div>
+        <h3><a href="/research/fewer-edges/">Fewer Edges, Faster Protein Graph Learning</a></h3>
+        <p>Graph construction and efficient geometric message passing for protein representation learning.</p>
+        <a class="card-link" href="/research/fewer-edges/">Research note →</a>
+      </article>
+      <article class="research-card">
+        <div class="card-topline"><span>Bachelor’s thesis</span><span>2026</span></div>
+        <h3><a href="/research/human-attention/">Human Attention for Large Language Model Training</a></h3>
+        <p>Eye-tracking signals for training, evaluating, and interpreting language models.</p>
+        <a class="card-link" href="/research/human-attention/">Thesis summary →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="home-block" aria-labelledby="home-projects">
+    <header class="block-header">
+      <div>
+        <p class="overline">Projects</p>
+        <h2 id="home-projects">Selected projects</h2>
+      </div>
+      <a href="/projects/">All projects →</a>
+    </header>
+    <div class="project-grid">
+      <article>
+        <span class="project-index">01</span>
+        <h3><a href="/projects/cucafera/">Cucafera</a></h3>
+        <p>A 244M-parameter Catalan language model trained from scratch.</p>
+        <div class="tag-list"><span>Language models</span><span>Catalan</span></div>
+      </article>
+      <article>
+        <span class="project-index">02</span>
+        <h3><a href="/projects/patufet/">Patufet</a></h3>
+        <p>Open datasets for training and fine-tuning Catalan language models.</p>
+        <div class="tag-list"><span>Data</span><span>NLP</span></div>
+      </article>
+      <article>
+        <span class="project-index">03</span>
+        <h3><a href="/projects/laia/">LaIA</a></h3>
+        <p>A search-grounded assistant for Catalan public administration.</p>
+        <div class="tag-list"><span>Search</span><span>AINAHack</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="home-about">
+    <p class="overline">Background</p>
+    <p>
+      My interests span mathematical foundations, geometric ML for biology,
+      and language technology. I also hold a professional music diploma in cello.
+    </p>
+    <a href="/about/">Biography, experience, and CV →</a>
+  </section>
 </main>
 {{ end }}
