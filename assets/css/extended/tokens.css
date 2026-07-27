@@ -1,0 +1,71 @@
+:root {
+  --background: #f7f6f2;
+  --surface: #ffffff;
+  --ink: #20231f;
+  --muted: #666a63;
+  --line: #d5d5cf;
+  --line-dark: #9b9d97;
+  --accent: #3155a4;
+  --accent-soft: #e2e8f4;
+  --note: #eeece5;
+  --warning: #eee4cf;
+  --intuition: #edf0e8;
+  --intuition-line: #72805f;
+  --result: #e8edf6;
+  --code-background: #242724;
+  --code-ink: #f3f3ef;
+  --tag-ink: #294780;
+  --header-background: rgba(247, 246, 242, 0.94);
+  --font-sans: "IBM Plex Sans", Arial, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
+  --site-width: 1180px;
+  --article-width: 720px;
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --background: #171916;
+  --surface: #20231f;
+  --ink: #e8e7e1;
+  --muted: #a5a79f;
+  --line: #363a34;
+  --line-dark: #5d6259;
+  --accent: #91aceb;
+  --accent-soft: #293651;
+  --note: #272923;
+  --warning: #372f21;
+  --intuition: #252b23;
+  --intuition-line: #879678;
+  --result: #242c3b;
+  --code-background: #0f110f;
+  --code-ink: #eeeeea;
+  --tag-ink: #bdcbef;
+  --header-background: rgba(23, 25, 22, 0.94);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  overflow-x: hidden;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
