@@ -70,7 +70,7 @@ The architectural choices were deliberately conventional. The research value of 
 
 ## Compute constraints
 
-The final pretraining run covered 11,007 steps at roughly half a million tokens per step—approximately 5.5 billion tokens. It took about 1.5 days on one A100 80GB GPU and cost $28.80 on Vast.ai.
+The final pretraining run covered 11,007 steps at roughly half a million tokens per step, approximately 5.5 billion tokens. It took about 1.5 days on one A100 80GB GPU and cost $28.80 on Vast.ai.
 
 ## Training failures and fixes
 

@@ -73,6 +73,8 @@ params:
     - "writing"
   assets:
     disableHLJS: true
+    favicon: "/favicon.svg"
+    
   socialIcons:
     - name: "github"
       url: "https://github.com/pauhidalgoo"
